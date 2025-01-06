@@ -10,4 +10,10 @@ import { SearchBoxComponent } from "../../../shared/components/search-box/search
 })
 export class ByCapitalPageComponent {
 
+
+  busquedaByCapital( term: string):void{
+    console.log('desde byCapital');
+    console.log({term});
+  }
+
 }
