@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { HomePageComponent } from './shared/pages/home-page/home-page.component';
 import { AboutPageComponent } from './shared/pages/about-page/about-page.component';
 import { ContactPageComponent } from './shared/pages/contact-page/contact-page.component';
+import { ByCapitalPageComponent } from './paises/pages/by-capital-page/by-capital-page.component';
 
 export const routes: Routes = [
 
@@ -22,6 +23,7 @@ export const routes: Routes = [
     children: [
       {
         path: 'by-capital',
+        //component: ByCapitalPageComponent
         loadComponent: ()=>
           import('./paises/pages/by-capital-page/by-capital-page.component').then(
             (m) => m.ByCapitalPageComponent
@@ -50,6 +52,7 @@ export const routes: Routes = [
       },
       {
         path: '**',
+        //component: ByCapitalPageComponent
         loadComponent: ()=>
           import('./paises/pages/by-capital-page/by-capital-page.component').then(
             (m) => m.ByCapitalPageComponent
