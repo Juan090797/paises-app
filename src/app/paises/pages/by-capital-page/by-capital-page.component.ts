@@ -3,11 +3,12 @@ import { SearchBoxComponent } from "../../../shared/components/search-box/search
 import { PaisesService } from '../../services/paises.service';
 import { Pais } from '../../interfaces/pais';
 import { CommonModule } from '@angular/common';
+import { PaisTableComponent } from "../../components/pais-table/pais-table.component";
 
 @Component({
   selector: 'app-by-capital-page',
   standalone: true,
-  imports: [SearchBoxComponent,CommonModule],
+  imports: [SearchBoxComponent, CommonModule, PaisTableComponent],
   templateUrl: './by-capital-page.component.html',
   styleUrl: './by-capital-page.component.css'
 })
