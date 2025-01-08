@@ -1,1 +1,23 @@
-<p>pais-page works!</p>
+<ng-template #loading>
+  <div class="alert alert-info">
+    Espere por favor
+  </div>
+</ng-template>
+
+
+<div *ngIf="pais; else loading">
+
+  <div class="row">
+    <div class="col-12">
+      <h2>Pais: <strong>{{ pais.name.common }}</strong></h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <h3>Bandera</h3>
+      <img [src]="pais.flags.svg" [alt]="pais.name.common" class="img-thumbnail">
+    </div>
+  </div>
+
+</div>
