@@ -1,5 +1,6 @@
+
 <ng-template #loading>
-  <div class="alert alert-info">
+  <div class="alert alert-info text-center">
     Espere por favor
   </div>
 </ng-template>
@@ -9,7 +10,8 @@
 
   <div class="row">
     <div class="col-12">
-      <h2>Pais: <strong>{{ pais.name.common }}</strong></h2>
+      <h2>País: <strong>{{ pais.name.common }}</strong></h2>
+      <hr>
     </div>
   </div>
 
@@ -18,6 +20,42 @@
       <h3>Bandera</h3>
       <img [src]="pais.flags.svg" [alt]="pais.name.common" class="img-thumbnail">
     </div>
+    <div class="col">
+      <h3>Información</h3>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>Población:</strong> {{ pais.population | number }}
+        </li>
+        <li class="list-group-item">
+          <strong>Código:</strong> {{ pais.cca3 }}
+        </li>
+      </ul>
+    </div>
   </div>
+
+  <div class="row mt-2">
+    <div class="col">
+
+      <h3>Traducciones</h3>
+
+      <div class="d-flex flex-wrap">
+
+        <span class="badge bg-primary m-1">{{ pais.translations['ara']?.common }}</span>
+        <span class="badge bg-primary m-1">{{ pais.translations['bre']?.common }}</span>
+        <span class="badge bg-primary m-1">{{ pais.translations['ces']?.common }}</span>
+        <span class="badge bg-primary m-1">{{ pais.translations['cym']?.common }}</span>
+        <span class="badge bg-primary m-1">{{ pais.translations['deu']?.common }}</span>
+        <span class="badge bg-primary m-1">{{ pais.translations['est']?.common }}</span>
+        <span class="badge bg-primary m-1">{{ pais.translations['fin']?.common }}</span>
+        <span class="badge bg-primary m-1">{{ pais.translations['ita']?.common }}</span>
+        <span class="badge bg-primary m-1">{{ pais.translations['kor']?.common }}</span>
+        <span class="badge bg-primary m-1">{{ pais.translations['per']?.common }}</span>
+
+      </div>
+
+
+    </div>
+  </div>
+
 
 </div>
